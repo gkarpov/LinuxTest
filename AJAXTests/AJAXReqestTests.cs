@@ -7,7 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AJAXTests
+namespace AJAXTests.StatusCodeTests
 {
     [TestFixture]
     public class AJAXReqestTests
@@ -40,7 +40,7 @@ namespace AJAXTests
         //}
 
         [Test]
-        public void StatusCodeTest_GET_SINGLE_USER()
+        public void TC_01_StatusCodeTest_GET_LIST_USERS()
         {
             // arrange
             RestRequest request = new RestRequest("/api/users?page=2", Method.GET);
@@ -51,9 +51,9 @@ namespace AJAXTests
             // assert
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
         }
-        
+
         [Test]
-        public void StatusCodeTest_GET_LIST_USERS()
+        public void TC_02_StatusCodeTest_GET_SINGLE_USER()
         {
             // arrange
             RestRequest request = new RestRequest("/api/users/2", Method.GET);
@@ -66,7 +66,7 @@ namespace AJAXTests
         }
 
         [Test]
-        public void StatusCodeTest_GET_SINGLE_USER_NOT_FOUND()
+        public void TC_03_StatusCodeTest_GET_SINGLE_USER_NOT_FOUND()
         {
             // arrange
             RestRequest request = new RestRequest("/api/users/23", Method.GET);
@@ -79,7 +79,7 @@ namespace AJAXTests
         }
 
         [Test]
-        public void StatusCodeTest_GET_LIST_RESURCE()
+        public void TC_04_StatusCodeTest_GET_LIST_RESURCE()
         {
             // arrange
             RestRequest request = new RestRequest("/api/unknown", Method.GET);
@@ -92,7 +92,7 @@ namespace AJAXTests
         }
 
         [Test]
-        public void StatusCodeTest_GET_SINGLE_RESOURCE()
+        public void TC_05_StatusCodeTest_GET_SINGLE_RESOURCE()
         {
             // arrange
             RestRequest request = new RestRequest("/api/unknown/2", Method.GET);
@@ -105,7 +105,7 @@ namespace AJAXTests
         }
 
         [Test]
-        public void StatusCodeTest_GET_SINGLE_RESOURCE_NOT_FOUND()
+        public void TC_06_StatusCodeTest_GET_SINGLE_RESOURCE_NOT_FOUND()
         {
             // arrange
             RestRequest request = new RestRequest("/api/unknown/23", Method.GET);
@@ -118,7 +118,7 @@ namespace AJAXTests
         }
 
         [Test]
-        public void StatusCodeTest_POST_CREATE()
+        public void TC_07_StatusCodeTest_POST_CREATE()
         {
             // arrange
             RestRequest request = new RestRequest("/api/users", Method.POST);
@@ -131,7 +131,7 @@ namespace AJAXTests
         }
 
         [Test]
-        public void StatusCodeTest_PUT_UPDATE()
+        public void TC_08_StatusCodeTest_PUT_UPDATE()
         {
             // arrange
             RestRequest request = new RestRequest("/api/users/2", Method.PUT);
@@ -144,7 +144,7 @@ namespace AJAXTests
         }
 
         [Test]
-        public void StatusCodeTest_PATCH_UPDATE()
+        public void TC_09_StatusCodeTest_PATCH_UPDATE()
         {
             // arrange
             RestRequest request = new RestRequest("/api/users/2", Method.PATCH);
@@ -157,7 +157,7 @@ namespace AJAXTests
         }
 
         [Test]
-        public void StatusCodeTest_DELETE()
+        public void TC_10_StatusCodeTest_DELETE()
         {
             // arrange
             RestRequest request = new RestRequest("/api/users/2", Method.DELETE);
@@ -170,7 +170,7 @@ namespace AJAXTests
         }
 
         [Test]
-        public void StatusCodeTest_POST_RIGESTER_SUC()
+        public void TC_11_StatusCodeTest_POST_RIGESTER_SUC()
         {
             // arrange
             RestRequest request = new RestRequest("/api/register", Method.POST);
@@ -183,7 +183,7 @@ namespace AJAXTests
         }
 
         [Test]
-        public void StatusCodeTest_POST_RIGESTER_UNSUC()
+        public void TC_12_StatusCodeTest_POST_RIGESTER_UNSUC()
         {
             // arrange
             RestRequest request = new RestRequest("/api/register", Method.POST);
@@ -196,7 +196,7 @@ namespace AJAXTests
         }
 
         [Test]
-        public void StatusCodeTest_POST_LOGIN_SUC()
+        public void TC_13_StatusCodeTest_POST_LOGIN_SUC()
         {
             // arrange
             RestRequest request = new RestRequest("/api/login", Method.POST);
@@ -209,7 +209,7 @@ namespace AJAXTests
         }
 
         [Test]
-        public void StatusCodeTest_POST_LOGIN_UNSUC()
+        public void TC_14_StatusCodeTest_POST_LOGIN_UNSUC()
         {
             // arrange
             RestRequest request = new RestRequest("/api/login", Method.POST);
@@ -222,7 +222,7 @@ namespace AJAXTests
         }
 
         [Test]
-        public void StatusCodeTest_GET_DELAYED_RESP()
+        public void TC_15_StatusCodeTest_GET_DELAYED_RESP()
         {
             // arrange
             RestRequest request = new RestRequest("/api/users?delay=3", Method.GET);
