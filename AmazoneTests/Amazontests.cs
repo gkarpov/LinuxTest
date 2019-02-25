@@ -27,54 +27,55 @@ namespace AmazonTest
 
         }
 
-        [Test(Description = "Verify item in chart")]
-        public void ItemInChart()
+        [Test(Description = "Verify item in cart")]
+        public void ItemInCart()
         {
-            string productName_Find;
-            string productName_Cart;
-            IWebElement departments = _driver.FindElement(By.Id("nav-link-shopall"));
-            
+            string productName_Find; //Title of found product
+            string productName_Cart; //Title of product in cart
             Actions builder = new Actions(_driver);
-            builder.MoveToElement(departments).Build().Perform();
-
             WebDriverWait wait_2sec = new WebDriverWait(_driver, TimeSpan.FromSeconds(2));
+            WebDriverWait wait_3sec = new WebDriverWait(_driver, TimeSpan.FromSeconds(3));
+
+            //////arrange+act
+
+            //Navigate to Departments
+            builder.MoveToElement(_driver.FindElement(By.Id("nav-link-shopall"))).Build().Perform();
             
-            IWebElement itemInList = wait_2sec.Until<IWebElement>(d => d.FindElement(By.PartialLinkText("Toys & Games")));
+            //wait for list and click on Toys&Games
+            wait_2sec.Until<IWebElement>(d => d.FindElement(By.PartialLinkText("Toys & Games"))).Click();
 
-            itemInList.Click();
+            //wait for page to load and click on Age box "14 years and up"
+            wait_2sec.Until<IWebElement>(d => d.FindElement(By.XPath("//*[@id=\"leftNav\"]/ul[1]/div/li[5]/span/span/div/label/span/span"))).Click();
 
-            IWebElement ageBox = wait_2sec.Until<IWebElement>(d => d.FindElement(By.XPath("//*[@id=\"leftNav\"]/ul[1]/div/li[5]/span/span/div/label/span/span")));
-
-            ageBox.Click();
-
-            IWebElement priceLow = wait_2sec.Until<IWebElement>(d => d.FindElement(By.Id("low-price")));
-            priceLow.SendKeys("10");
-
+            //enter price range and click GO
+            _driver.FindElement(By.Id("low-price")).SendKeys("10");
             _driver.FindElement(By.Id("high-price")).SendKeys("150");
-            _driver.FindElement(By.Id("a-autoid-1")).Click();
+            _driver.FindElement(By.Id("high-price")).SendKeys(Keys.Tab);
+            _driver.FindElement(By.Id("high-price")).SendKeys(Keys.Enter);
+           
 
-            //IWebElement itemInList = wait_2sec.Until<IWebElement>(d => d.FindElement(By.PartialLinkText("Toys & Games")));
-            IWebElement resultsTable = wait_2sec.Until<IWebElement>(d => d.FindElement(By.Id("search")));
-            resultsTable.FindElement(By.XPath("./div[1]/div[2]/div/span[3]/div[1]/div[1]")).Click();
+            //wait results to load and click on the first item found
+            wait_3sec.Until<IWebElement>(d => d.FindElement(By.Id("search"))).FindElement(By.XPath("./div[1]/div[2]/div/span[3]/div[1]/div[1]")).Click(); 
 
+            //read the product title
             productName_Find = _driver.FindElement(By.Id("productTitle")).Text;
-                
-            IWebElement qty = _driver.FindElement(By.Id("quantity"));
 
-            qty.Click();
-            qty.FindElement(By.XPath("./option[4]")).Click();
+            //set quantity to 4
+            _driver.FindElement(By.Id("quantity")).Click();
+            _driver.FindElement(By.Id("quantity")).FindElement(By.XPath("./option[4]")).Click();
 
 
+            //Add to cart
             _driver.FindElement(By.Id("add-to-cart-button")).Click();
 
+            //Open the cart
             _driver.FindElement(By.Id("hlb-view-cart-announce")).Click();
 
-            IWebElement cartItems = _driver.FindElement(By.Id("activeCartViewForm"));
+            //Read product title from cart
+            productName_Cart = _driver.FindElement(By.Id("activeCartViewForm")).FindElement(By.XPath("./div[2]/div/div[4]/div/div[1]/div/div/div[2]/ul/li[1]/span/a/span")).Text;
 
-            IWebElement cartItemName = cartItems.FindElement(By.XPath("./div[2]/div/div[4]/div/div[1]/div/div/div[2]/ul/li[1]/span/a/span"));
 
-             productName_Cart = cartItemName.Text;
-
+            //////Assert
             Assert.AreEqual(productName_Find, productName_Cart);
         }
 
