@@ -192,6 +192,12 @@ namespace AJAXTests.SubjectTests
             // arrange
             RestRequest request = new RestRequest("/api/users", Method.POST);
 
+            // Json to post.
+            jsonToSend = "{\n\"name\": \"morpheus\",\n\"job\": \"leader\"\n}";
+
+            request.AddParameter("application/json; charset=utf-8", jsonToSend, ParameterType.RequestBody);
+            request.RequestFormat = DataFormat.Json;
+
             // act
             IRestResponse response = client.Execute(request);
 
@@ -216,6 +222,11 @@ namespace AJAXTests.SubjectTests
         {
             // arrange
             RestRequest request = new RestRequest("/api/users/2", Method.PUT);
+            // Json to post.
+            jsonToSend = "{\n\"name\": \"morpheus\",\n\"job\": \"zion resident\"\n}";
+
+            request.AddParameter("application/json; charset=utf-8", jsonToSend, ParameterType.RequestBody);
+            request.RequestFormat = DataFormat.Json;
 
             // act
             IRestResponse response = client.Execute(request);
@@ -237,6 +248,11 @@ namespace AJAXTests.SubjectTests
         {
             // arrange
             RestRequest request = new RestRequest("/api/users/2", Method.PATCH);
+            // Json to post.
+            jsonToSend = "{\n\"name\": \"morpheus\",\n\"job\": \"zion resident\"\n}";
+
+            request.AddParameter("application/json; charset=utf-8", jsonToSend, ParameterType.RequestBody);
+            request.RequestFormat = DataFormat.Json;
 
             // act
             IRestResponse response = client.Execute(request);

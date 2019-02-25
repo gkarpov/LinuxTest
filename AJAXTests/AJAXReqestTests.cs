@@ -9,10 +9,13 @@ using System.Threading.Tasks;
 
 namespace AJAXTests.StatusCodeTests
 {
+    
+
     [TestFixture]
     public class AJAXReqestTests
     {
         private RestClient client;
+        private string jsonToSend;
 
         [SetUp]
         public void Setup()
@@ -20,25 +23,7 @@ namespace AJAXTests.StatusCodeTests
             client = new RestClient("https://reqres.in/");
         }
 
-
-        //TODO
-        //[TestCase("nl", "3825 ", HttpStatusCode.OK, TestName = "Check status code for NL zip code 7411")]
-        //[TestCase("lv", "1050 ", HttpStatusCode.NotFound, TestName = "Check status code for LV zip code 1050"]
-        //public void StatusCodeTest(string countryCode, string zipCode, HttpStatusCode expectedHttpStatusCode)
-        //{
-        //    // arrange
-        //    RestClient client = new RestClient(" http://api.zippopotam.us");
-        //    RestRequest request = new RestRequest($"
-        //    { countryCode}/{ zipCode}
-        //    ", Method.GET);
-
-        //    // act
-        //    IRestResponse response = client.Execute(request);
-
-        //    // assert
-        //    Assert.That(response.StatusCode, Is.EqualTo(expectedHttpStatusCode));
-        //}
-
+       
         [Test]
         public void TC_01_StatusCodeTest_GET_LIST_USERS()
         {
@@ -122,7 +107,12 @@ namespace AJAXTests.StatusCodeTests
         {
             // arrange
             RestRequest request = new RestRequest("/api/users", Method.POST);
+            
+            // Json to post.
+            jsonToSend = "{\n\"name\": \"morpheus\",\n\"job\": \"leader\"\n}";
 
+            request.AddParameter("application/json; charset=utf-8", jsonToSend, ParameterType.RequestBody);
+            request.RequestFormat = DataFormat.Json;
             // act
             IRestResponse response = client.Execute(request);
 
@@ -135,7 +125,11 @@ namespace AJAXTests.StatusCodeTests
         {
             // arrange
             RestRequest request = new RestRequest("/api/users/2", Method.PUT);
+            // Json to post.
+            jsonToSend = "{\n\"name\": \"morpheus\",\n\"job\": \"zion resident\"\n}";
 
+            request.AddParameter("application/json; charset=utf-8", jsonToSend, ParameterType.RequestBody);
+            request.RequestFormat = DataFormat.Json;
             // act
             IRestResponse response = client.Execute(request);
 
@@ -148,6 +142,12 @@ namespace AJAXTests.StatusCodeTests
         {
             // arrange
             RestRequest request = new RestRequest("/api/users/2", Method.PATCH);
+
+            // Json to post.
+            jsonToSend = "{\n\"name\": \"morpheus\",\n\"job\": \"zion resident\"\n}";
+
+            request.AddParameter("application/json; charset=utf-8", jsonToSend, ParameterType.RequestBody);
+            request.RequestFormat = DataFormat.Json;
 
             // act
             IRestResponse response = client.Execute(request);
@@ -174,7 +174,11 @@ namespace AJAXTests.StatusCodeTests
         {
             // arrange
             RestRequest request = new RestRequest("/api/register", Method.POST);
+            // Json to post.
+            jsonToSend = "{\n\"email\": \"sydney @fife\",\n\"password\": \"pistol\"\n}";
 
+            request.AddParameter("application/json; charset=utf-8", jsonToSend, ParameterType.RequestBody);
+            request.RequestFormat = DataFormat.Json;
             // act
             IRestResponse response = client.Execute(request);
 
@@ -187,7 +191,11 @@ namespace AJAXTests.StatusCodeTests
         {
             // arrange
             RestRequest request = new RestRequest("/api/register", Method.POST);
+            // Json to post.
+            jsonToSend = "{\n\"email\": \"sydney @fife\"\n}";
 
+            request.AddParameter("application/json; charset=utf-8", jsonToSend, ParameterType.RequestBody);
+            request.RequestFormat = DataFormat.Json;
             // act
             IRestResponse response = client.Execute(request);
 
@@ -200,7 +208,12 @@ namespace AJAXTests.StatusCodeTests
         {
             // arrange
             RestRequest request = new RestRequest("/api/login", Method.POST);
+            // Json to post.
+            jsonToSend = "{\n \"email\": \"peter @klaven\",\n\"password\": \"cityslicka\" \n}";
 
+            request.AddParameter("application/json; charset=utf-8", jsonToSend, ParameterType.RequestBody);
+            request.RequestFormat = DataFormat.Json;
+            
             // act
             IRestResponse response = client.Execute(request);
 
@@ -213,7 +226,11 @@ namespace AJAXTests.StatusCodeTests
         {
             // arrange
             RestRequest request = new RestRequest("/api/login", Method.POST);
+            // Json to post.
+            jsonToSend = "{\n \"email\": \"peter @klaven\"\n}";
 
+            request.AddParameter("application/json; charset=utf-8", jsonToSend, ParameterType.RequestBody);
+            request.RequestFormat = DataFormat.Json;
             // act
             IRestResponse response = client.Execute(request);
 
