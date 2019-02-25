@@ -20,6 +20,7 @@ namespace AJAXTests.DataEntities
         public string TotalPages { get; set; }
         [JsonProperty("data")]
         public List<UserData> Data { get; set; }
+        
     }
 
     class SingleUserResponse

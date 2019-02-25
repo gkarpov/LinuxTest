@@ -12,7 +12,7 @@ namespace AJAXTests.StatusCodeTests
     
 
     [TestFixture]
-    public class AJAXReqestTests
+    public class AJAXStatusCodeTests
     {
         private RestClient client;
         private string jsonToSend;

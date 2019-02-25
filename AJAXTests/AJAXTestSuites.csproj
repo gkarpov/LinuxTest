@@ -63,9 +63,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AJAXReqestTests.cs" />
     <Compile Include="AJAXSubjectTests.cs" />
-    <Compile Include="DataDrivenAJAXRequestTests.cs" />
+    <Compile Include="DataDrivenAJAXRStatusCodeTests.cs" />
     <Compile Include="DataEntities\UserData.cs" />
     <Compile Include="DataEntities\UserResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
