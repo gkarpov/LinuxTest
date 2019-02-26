@@ -60,11 +60,21 @@ namespace AmazonTest
             //read the product title
             productName_Find = _driver.FindElement(By.Id("productTitle")).Text;
 
-            //set quantity to 4
-            _driver.FindElement(By.Id("quantity")).Click();
-            _driver.FindElement(By.Id("quantity")).FindElement(By.XPath("./option[4]")).Click();
+            //if 4 or more qty available 
+            if(_driver.FindElement(By.XPath("//*[@id=\"availability\"]/span")).Displayed == false) {
+
+                if (_driver.FindElement(By.XPath("//*[@id=\"availability\"]/span")).Text != "Only 1 left in stock - order soon." &&
+                    _driver.FindElement(By.XPath("//*[@id=\"availability\"]/span")).Text != "Only 2 left in stock - order soon." &&
+                    _driver.FindElement(By.XPath("//*[@id=\"availability\"]/span")).Text != "Only 3 left in stock - order soon.")
+                {
+                    //set quantity to 4
+                    _driver.FindElement(By.Id("quantity")).Click();
+                    _driver.FindElement(By.Id("quantity")).FindElement(By.XPath("./option[4]")).Click();
+                }
+            }
 
 
+            //else set 1 qty in cart
             //Add to cart
             _driver.FindElement(By.Id("add-to-cart-button")).Click();
 
