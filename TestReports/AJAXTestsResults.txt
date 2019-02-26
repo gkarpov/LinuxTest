@@ -1,0 +1,304 @@
+Group Name: AJAXTestSuites
+Group By: Hierarchy
+Group Full Name: AJAXTestSuites
+Duration: 0:00:14.027
+0 test(s) failed
+0 test(s) skipped
+37 test(s) passed
+
+Result1 Name:	TC_01_01_SubjectTest_GET_LIST_USERS_TotalPages
+Result1 Outcome:	Passed
+Result1 Duration:	0:00:00.411
+Result1 StackTrace:
+Result1 Message:
+Result1 StandardOutput:
+Result1 StandardError:
+
+Result2 Name:	TC_01_02_SubjectTest_GET_LIST_USERS_FirstElement_FirstName
+Result2 Outcome:	Passed
+Result2 Duration:	0:00:00.211
+Result2 StackTrace:
+Result2 Message:
+Result2 StandardOutput:
+Result2 StandardError:
+
+Result3 Name:	TC_01_03_SubjectTest_GET_LIST_USERS_id_FirstName
+Result3 Outcome:	Passed
+Result3 Duration:	0:00:00.218
+Result3 StackTrace:
+Result3 Message:
+Result3 StandardOutput:
+Result3 StandardError:
+
+Result4 Name:	TC_02_01_SubjectTest_GET_SINGLE_USER
+Result4 Outcome:	Passed
+Result4 Duration:	0:00:00.336
+Result4 StackTrace:
+Result4 Message:
+Result4 StandardOutput:
+Result4 StandardError:
+
+Result5 Name:	TC_03_01_SubjectTest_GET_SINGLE_USER_NOT_FOUND
+Result5 Outcome:	Passed
+Result5 Duration:	0:00:00.205
+Result5 StackTrace:
+Result5 Message:
+Result5 StandardOutput:
+Result5 StandardError:
+
+Result6 Name:	TC_04_01_SubjectTest_GET_LIST_RESOURCE_TotalPages
+Result6 Outcome:	Passed
+Result6 Duration:	0:00:00.235
+Result6 StackTrace:
+Result6 Message:
+Result6 StandardOutput:
+Result6 StandardError:
+
+Result7 Name:	TC_04_02_SubjectTest_GET_LIST_RESOURCE_FirstElement_Name
+Result7 Outcome:	Passed
+Result7 Duration:	0:00:00.203
+Result7 StackTrace:
+Result7 Message:
+Result7 StandardOutput:
+Result7 StandardError:
+
+Result8 Name:	TC_04_03_SubjectTest_GET_LIST_RESOURCE_id_Name
+Result8 Outcome:	Passed
+Result8 Duration:	0:00:00.259
+Result8 StackTrace:
+Result8 Message:
+Result8 StandardOutput:
+Result8 StandardError:
+
+Result9 Name:	TC_05_01_SubjectTest_GET_SINGLE_RESOURCE
+Result9 Outcome:	Passed
+Result9 Duration:	0:00:00.242
+Result9 StackTrace:
+Result9 Message:
+Result9 StandardOutput:
+Result9 StandardError:
+
+Result10 Name:	TC_06_01_SubjectTest_GET_SINGLE_RESOURCE_NOT_FOUND
+Result10 Outcome:	Passed
+Result10 Duration:	0:00:00.202
+Result10 StackTrace:
+Result10 Message:
+Result10 StandardOutput:
+Result10 StandardError:
+
+Result11 Name:	TC_07_01_SubjectTest_POST_CREATE_Name_Job
+Result11 Outcome:	Passed
+Result11 Duration:	0:00:00.543
+Result11 StackTrace:
+Result11 Message:
+Result11 StandardOutput:
+Result11 StandardError:
+
+Result12 Name:	TC_07_02_SubjectTest_POST_CREATE_Day
+Result12 Outcome:	Passed
+Result12 Duration:	0:00:00.25
+Result12 StackTrace:
+Result12 Message:
+Result12 StandardOutput:
+Result12 StandardError:
+
+Result13 Name:	TC_08_01_SubjectTest_PUT_UPDATE_Name_Job
+Result13 Outcome:	Passed
+Result13 Duration:	0:00:00.517
+Result13 StackTrace:
+Result13 Message:
+Result13 StandardOutput:
+Result13 StandardError:
+
+Result14 Name:	TC_08_02_SubjectTest_PUT_UPDATE_Day
+Result14 Outcome:	Passed
+Result14 Duration:	0:00:00.252
+Result14 StackTrace:
+Result14 Message:
+Result14 StandardOutput:
+Result14 StandardError:
+
+Result15 Name:	TC_09_01_SubjectTest_PATCH_UPDATE_Name_Job
+Result15 Outcome:	Passed
+Result15 Duration:	0:00:00.244
+Result15 StackTrace:
+Result15 Message:
+Result15 StandardOutput:
+Result15 StandardError:
+
+Result16 Name:	TC_09_02_SubjectTest_PATCH_UPDATE_Day
+Result16 Outcome:	Passed
+Result16 Duration:	0:00:00.249
+Result16 StackTrace:
+Result16 Message:
+Result16 StandardOutput:
+Result16 StandardError:
+
+Result17 Name:	TC_10_01_SubjectTest_DELETE
+Result17 Outcome:	Passed
+Result17 Duration:	0:00:00.204
+Result17 StackTrace:
+Result17 Message:
+Result17 StandardOutput:
+Result17 StandardError:
+
+Result18 Name:	TC_11_01_SubjectTest_POST_RIGESTER_SUC_TokenLength
+Result18 Outcome:	Passed
+Result18 Duration:	0:00:00.25
+Result18 StackTrace:
+Result18 Message:
+Result18 StandardOutput:
+Result18 StandardError:
+
+Result19 Name:	TC_12_01_SubjectTest_POST_RIGESTER_UNSUC_ErrorMessage
+Result19 Outcome:	Passed
+Result19 Duration:	0:00:00.247
+Result19 StackTrace:
+Result19 Message:
+Result19 StandardOutput:
+Result19 StandardError:
+
+Result20 Name:	TC_13_01_SubjectTest_POST_LOGIN_SUC
+Result20 Outcome:	Passed
+Result20 Duration:	0:00:00.246
+Result20 StackTrace:
+Result20 Message:
+Result20 StandardOutput:
+Result20 StandardError:
+
+Result21 Name:	TC_14_01_SubjectTest_POST_LOGIN_UNSUC
+Result21 Outcome:	Passed
+Result21 Duration:	0:00:00.241
+Result21 StackTrace:
+Result21 Message:
+Result21 StandardOutput:
+Result21 StandardError:
+
+Result22 Name:	TC_15_01_SubjectTest_GET_DELAYED_RESP
+Result22 Outcome:	Passed
+Result22 Duration:	0:00:00.203
+Result22 StackTrace:
+Result22 Message:
+Result22 StandardOutput:
+Result22 StandardError:
+
+Result23 Name:	TestCase 01: GET - LIST USERS
+Result23 Outcome:	Passed
+Result23 Duration:	0:00:00.997
+Result23 StackTrace:
+Result23 Message:
+Result23 StandardOutput:
+Result23 StandardError:
+
+Result24 Name:	TestCase 02: GET - SINGLE USER
+Result24 Outcome:	Passed
+Result24 Duration:	0:00:00.24
+Result24 StackTrace:
+Result24 Message:
+Result24 StandardOutput:
+Result24 StandardError:
+
+Result25 Name:	TestCase 03: GET - SINGLE USER - NOT FOUND
+Result25 Outcome:	Passed
+Result25 Duration:	0:00:00.377
+Result25 StackTrace:
+Result25 Message:
+Result25 StandardOutput:
+Result25 StandardError:
+
+Result26 Name:	TestCase 04: GET - LIST <RESOURCE>
+Result26 Outcome:	Passed
+Result26 Duration:	0:00:00.356
+Result26 StackTrace:
+Result26 Message:
+Result26 StandardOutput:
+Result26 StandardError:
+
+Result27 Name:	TestCase 05: GET - SINGLE <RESOURCE>
+Result27 Outcome:	Passed
+Result27 Duration:	0:00:00.209
+Result27 StackTrace:
+Result27 Message:
+Result27 StandardOutput:
+Result27 StandardError:
+
+Result28 Name:	TestCase 06: GET - SINGLE <RESOURCE> - NOT FOUND
+Result28 Outcome:	Passed
+Result28 Duration:	0:00:00.202
+Result28 StackTrace:
+Result28 Message:
+Result28 StandardOutput:
+Result28 StandardError:
+
+Result29 Name:	TestCase 07: POST - CREATE
+Result29 Outcome:	Passed
+Result29 Duration:	0:00:00.247
+Result29 StackTrace:
+Result29 Message:
+Result29 StandardOutput:
+Result29 StandardError:
+
+Result30 Name:	TestCase 08: PUT - UPDATE
+Result30 Outcome:	Passed
+Result30 Duration:	0:00:00.243
+Result30 StackTrace:
+Result30 Message:
+Result30 StandardOutput:
+Result30 StandardError:
+
+Result31 Name:	TestCase 09: PATCH - UPDATE
+Result31 Outcome:	Passed
+Result31 Duration:	0:00:00.26
+Result31 StackTrace:
+Result31 Message:
+Result31 StandardOutput:
+Result31 StandardError:
+
+Result32 Name:	TestCase 10: DELETE
+Result32 Outcome:	Passed
+Result32 Duration:	0:00:00.2
+Result32 StackTrace:
+Result32 Message:
+Result32 StandardOutput:
+Result32 StandardError:
+
+Result33 Name:	TestCase 11: POST - REGISTER - SUCCESFUL
+Result33 Outcome:	Passed
+Result33 Duration:	0:00:00.4
+Result33 StackTrace:
+Result33 Message:
+Result33 StandardOutput:
+Result33 StandardError:
+
+Result34 Name:	TestCase 12: POST - REGISTER - UNSUCCESFUL
+Result34 Outcome:	Passed
+Result34 Duration:	0:00:00.261
+Result34 StackTrace:
+Result34 Message:
+Result34 StandardOutput:
+Result34 StandardError:
+
+Result35 Name:	TestCase 13: POST - LOGIN - SUCCESFUL
+Result35 Outcome:	Passed
+Result35 Duration:	0:00:00.253
+Result35 StackTrace:
+Result35 Message:
+Result35 StandardOutput:
+Result35 StandardError:
+
+Result36 Name:	TestCase 14: POST - LOGIN - UNSUCCESFUL
+Result36 Outcome:	Passed
+Result36 Duration:	0:00:00.254
+Result36 StackTrace:
+Result36 Message:
+Result36 StandardOutput:
+Result36 StandardError:
+
+Result37 Name:	TestCase 15: GET - DELAYED RESPONSE
+Result37 Outcome:	Passed
+Result37 Duration:	0:00:03.56
+Result37 StackTrace:
+Result37 Message:
+Result37 StandardOutput:
+Result37 StandardError:
+

@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace AmazonTest
 {
     [TestFixture]
-    public class Amazontests
+    public class Amazontest
     {
         private IWebDriver _driver;
         

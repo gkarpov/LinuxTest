@@ -9,8 +9,6 @@ using System.Threading.Tasks;
 
 namespace AJAXtests.DataDrivenAJAXStatusCodeTests
 {
-    class DataDrivenAJAXRequestTests
-    {
         [TestFixture]
         public class AJAXReqestTests
         {
@@ -55,5 +53,5 @@ namespace AJAXtests.DataDrivenAJAXStatusCodeTests
             }
 
         }
-    }
+    
 }
